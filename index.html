@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+    <!-- //begin by creating a header with the game title -->
     <div class="header">
         <div class="row">
             <h1>The Psychic Game!</h1>
         </div>
     </div>
-
+    <!--//Create a container to hold the user input and score-->
     <div class="container">
         <div class="row">
             <h2>Guess the letter I'm thinking of and you win!</h2>
@@ -23,6 +24,10 @@
             <div class="col-md-6">
                 Wins:
             </div>
+            <div class="col-md-6" id="winCount">
+                0
+            </div>
+
         </div>
     </div>
 
@@ -30,17 +35,28 @@
         <div class="col-md-6">
             Losses:
         </div>
+        <div class="col-md-6" id = "lossCount">
+            0
+        </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
             Guesses Remaining:
         </div>
+        <div class= "col-md-6" id= "guessesRemaining">
+            9
+        </div>
     </div>
+
+
 
     <div class="row">
         <div class="col-md-6">
             Your Guesses:
+        </div>
+        <div class= "col-md-6" id="lettersGuessed">
+            guesses...
         </div>
     </div>
 
