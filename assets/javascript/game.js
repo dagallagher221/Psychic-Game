@@ -1,13 +1,13 @@
 //Begin by identifying variables needed for the game
-    window.winCount = 0;
-    window.lossCount = 0;
+    var winCount = 0;
+    var lossCount = 0;
     var guessesRemaining=9;
     var lettersGuessed = [];
     var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 //Create a way for the computer to select a letter at random
 var randomNum = Math.floor(Math.random()*alphabet.length);
-window.compChoice = alphabet[randomNum];
+compChoice = alphabet[randomNum];
 console.log(compChoice);
 
 //Add event listener for user input
@@ -32,7 +32,7 @@ document.onkeyup = function(event) {
     //Compare the User selection to the Computer selection
     if (window.compChoice === userChoice) {
         alert("You win! Congratulations!");
-        document.getElementById("winCount").innerHTML = ++window.winCount;
+        document.getElementById("winCount").innerHTML = ++winCount;
         lettersGuessed= [];
         document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
         var randomNum = Math.floor(Math.random()*alphabet.length);
@@ -49,7 +49,7 @@ document.onkeyup = function(event) {
     }
         //Have computer select new letter if the user loses
         if (guessesRemaining === 0) {
-            document.getElementById("lossCount").innerHTML = ++window.lossCount;
+            document.getElementById("lossCount").innerHTML = ++lossCount;
             alert("You Lost! Try Again")
             guessesRemaining=9;
             lettersGuessed=[];
