@@ -30,13 +30,13 @@ document.onkeyup = function(event) {
 
 
     //Compare the User selection to the Computer selection
-    if (window.compChoice === userChoice) {
+    if (compChoice === userChoice) {
         alert("You win! Congratulations!");
         document.getElementById("winCount").innerHTML = ++winCount;
         lettersGuessed= [];
         document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
         var randomNum = Math.floor(Math.random()*alphabet.length);
-        window.compChoice = alphabet[randomNum];
+        compChoice = alphabet[randomNum];
         guessesRemaining=9;
         document.getElementById("guessesRemaining").innerHTML=9;
         console.log(compChoice);
